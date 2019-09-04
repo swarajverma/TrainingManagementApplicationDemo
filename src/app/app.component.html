@@ -1,21 +1,65 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<app-header></app-header>
+<div class="container">
+    <div *ngIf="getName">
+        <router-outlet (activate)='onActivate($event)'
+        (deactivate)='onDeactivate($event)'></router-outlet>
+        <div class="loading row" id="loadingDiv" [hidden]="showHomeScreen" style="text-align: center; margin-top: 15px; height: 100%;">
+            <div class="jumbotron col-sm-16 offset-sm-1" id="message">
+                <h2 style="color: #367c2b;"><b>Welcome to Global IT Training Management Application!</b></h2><br>
+                <div style="background-color: rgba(245, 245, 245, 0); border-radius:4px">
+                    <h6>
+                        <p>The Global IT Training Management application (TMA) page is a collaborative site that
+                            features SAP/PDM/MPM curriculam.
+                            <br>
+                            This application allows our employees to effectively manage
+                            their training curriculams in support of our IT systems.</p>
+                    </h6>
+                </div>
+            </div>
+            <div id="links" class="jumbotron col-sm-5 offset-sm-1">
+                <h3 style="padding: 0;">Popular Links</h3>
+                <ul>
+                    <li><a href="#">Process Map/Selection</a></li>
+                    <li><a href="#">Roles</a></li>
+                    <li><a href="#">Training DB</a></li>
+                    <li><a href="#">View All Users</a></li>
+                    <li><a href="#">Reports</a></li>
+                    <li><a href="#" (click)="logout()">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="!getName">
+        <div class="row" style="text-align: center; margin-top: 15px">
+            <div class=" jumbotron col-sm-16 offset-sm-1" id="message">
+                <h2 style="color: #367c2b"><b>Welcome to Global IT Training Management Application!</b></h2><br>
+                <div style="background-color: rgba(245, 245, 245, 0); border-radius:4px">
+                    <h6>
+                        <p>The Global IT Training Management application (TMA) page is a collaborative site that
+                            features SAP/PDM/MPM curriculam.
+                            <br>
+                            This application allows our employees to effectively manage
+                            their training curriculams in support of our IT systems.</p>
+                    </h6>
+                </div>
+            </div>
+            <div id="links" class="jumbotron col-sm-5 offset-sm-1">
+                <h3>Popular Links</h3>
+                <ul>
+                    <li><a href="#">Process Map/Selection</a></li>
+                    <li><a href="#">Roles</a></li>
+                    <li><a href="#">Training DB</a></li>
+                    <li><a href="#">View All Users</a></li>
+                    <li><a href="#">Reports</a></li>
+                </ul>
+            </div>
+            <div class="jumbotron offset-sm-1 col-sm-22" id="login">
+                <h4><i>You are not logged in. Please login to continue.</i></h4>
+                <br><br>
+                <button type="button" class="btn btn-success" (click)="login()">Login</button>
+            </div>
+        </div>
+    </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
-<router-outlet></router-outlet>
+<app-footer></app-footer>

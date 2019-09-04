@@ -5,7 +5,6 @@
   "projects": {
     "TrainingManagementApplicationAngular": {
       "root": "",
-      "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
       "schematics": {},
@@ -19,13 +18,16 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              { "glob": "**/*", "input": "src/assets/", "output": "/" },
+              { "glob": "favicon.ico", "input": "src/", "output": "/" }
             ],
             "styles": [
+              "src/assets/css/uxframe-2019.2.2.min.css",
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "src/assets/js/uxframe-plus-2019.2.2.min.js"
+              ],
             "es5BrowserSupport": true
           },
           "configurations": {

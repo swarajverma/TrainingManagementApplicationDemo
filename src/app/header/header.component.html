@@ -1,0 +1,67 @@
+
+
+<div class="uxf-skip-link">
+    <a id="skipLink2" class="sr-only sr-only-focusable" href="#content">
+        Skip to main content
+    </a>
+    </div>
+    <header class="uxf-header navbar"><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <a aria-label="home page" href="#">
+        <div class="uxf-logo">
+        </div>
+    </a>
+    <div class="uxf-header-title">
+        <h1 class="uxf-header-title-heading" style="color:#367c2b">
+            Training Management Application
+        </h1>
+        <div class="dropdown" style= "position: inherit" *ngIf="getName"> 
+                Welcome,
+                <span style="color:#367c2b" >{{getName}}</span>
+        </div>
+    </div>
+    <button class="btn uxf-btn-search uxf-btn-mobile-search" data-search-toggle="closed">
+        <span class="sr-only">Toggle Search</span>
+        <svg focusable="false" aria-hidden="true" fill="#666" class="uxf-icon-search" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#siteTopnav" aria-controls="#siteTopnav" aria-expanded="false" aria-label="Toggle navigation">
+        <svg focusable="false" aria-hidden="true" fill="#666" class="menu-icon" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></button>
+    <form role="search" id="header-search-form1" class="uxf-header-search navbar-form" action="">
+        <input tabindex="-1" id="desktop-search1" aria-label="Search" class="uxf-search-bar" type="search" placeholder="Search" name="s"><button class="uxf-search-bar-clear-icon uxf-btn-icon" type="reset" aria-label="reset">
+            <svg focusable="false" aria-hidden="true" class="uxf-icon-remove" fill="#666" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></button>
+        <button aria-label="Search" id="submit-form1" class="btn uxf-btn-search">
+            <svg focusable="false" aria-hidden="true" class="uxf-icon-search" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></button>
+        <button type="submit" class="btn uxf-btn-mobile-search">Go</button>
+    </form>
+    </header>
+
+    
+<nav class="navbar uxf-top-nav navbar-expand-md"><div class="collapse navbar-collapse" id="navbarExample1" >
+    <ul class="navbar-nav">
+<li class="uxf-nav-back">
+            <button class="navbar-back btn btn-link" aria-label="Close Navigation Menu" data-toggle="collapse" data-target="#navbarExample1" aria-controls="navbarExample1" type="button" aria-expanded="false">
+                <svg focusable="false" aria-hidden="true" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></button>
+        </li>
+        <li class="nav-item uxf-nav-item-icon active">
+            <a class="nav-icon" aria-label="home page" href="index.html">
+                <svg focusable="false" aria-hidden="true" class="nav-home-icon" fill="#aaa" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" [routerLink]="'/globalinformation'">
+                <span class="uxf-link-text">Global Information</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+                <span class="uxf-link-text">Unit Information</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+                <span class="uxf-link-text">Help</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<h1 class="uxf-nav-title">
+    <a href="http://ux.deere.com%20">User eXperience</a>
+</h1>
+</nav>

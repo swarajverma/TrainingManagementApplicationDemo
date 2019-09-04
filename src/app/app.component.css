@@ -1,0 +1,28 @@
+#links{
+    text-align: left;
+}
+#login{
+    width: 100%;
+    padding-right: 5%;
+    padding-right: 5%;
+}
+#message{
+    
+    background-image: url("../assets/images/background.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+h6{
+    text-align: left;
+    line-height: 1.5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    
+}
+div.loading{
+    /* margin-top: 15px;
+    height: 200%; */
+    /* display: none; */
+    /* background-image: url("../assets/images/tractor.jpg"); */
+    
+}

@@ -1,0 +1,40 @@
+<footer class="footer uxf-footer" role="contentinfo" style="margin-bottom: 0em" id="footer">
+  <div class="container-fluid">
+    <!-- <div class="row flex-xl-nowrap"> -->
+      <div class="col-24">
+        <ul class="nav">
+          <li>
+            <a class="uxf-footer-link" href="#">Home</a>
+          </li>
+          <li>
+            <a class="uxf-footer-link" href="#">Contact Us</a>
+          </li>
+          <li>
+            <a class="uxf-footer-link" href="https://github.deere.com/ux/uxframe" target="_blank"
+              rel="noopener noreferrer">GitHub</a>
+          </li>
+          <li>
+            <a class="uxf-footer-link"
+              href="https://johndeere.cvent.com/pub/eMarketing/Pages/SignUp.aspx?p=2a69c63b-ace1-454f-bbe3-e371c5a09d58&amp;m="
+              target="_blank" rel="noopener noreferrer">Subscribe to our Newsletter</a>
+          </li>
+          <li>
+            <a class="uxf-footer-link" href="https://www.deere.com/en/privacy-and-data/">Privacy &amp; Data</a>
+          </li>
+          <li>
+            <a class="uxf-footer-link" href="https://www.deere.com/en/privacy-and-data/terms/">Terms of Use</a>
+          </li>
+        </ul>
+        <span class="uxf-footer-legal">Copyright ©
+          <span id="uxf-current-year"></span> Deere &amp; Company. All Rights Reserved.</span>
+      </div>
+    <!-- </div> -->
+  </div>
+</footer>
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+    $(function () {
+      document.getElementById("uxf-current-year").innerHTML = new Date().getFullYear();
+    });
+  });
+</script>
