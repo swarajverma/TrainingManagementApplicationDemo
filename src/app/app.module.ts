@@ -13,6 +13,9 @@ import { TrainingreportsComponent } from './global/trainingreports/trainingrepor
 import { ModifycurriculumComponent } from './global/modifycurriculum/modifycurriculum.component';
 import { AdminsecurityComponent } from './global/adminsecurity/adminsecurity.component';
 import { GlobalinfoComponent } from './global/globalinfo/globalinfo.component';
+import { TrainingcurriculumComponent } from './unit/trainingcurriculum/trainingcurriculum.component';
+import { ProjectfilesComponent } from './unit/projectfiles/projectfiles.component';
+import { UnitinformationComponent } from './unit/unitinformation/unitinformation.component';
 
 
 
@@ -23,10 +26,11 @@ export function onAuthRequired({ oktaAuth, router }) {
 const ROUTES: Routes=[
   {path:'globalinformation', component: GlobalinfoComponent,
   children: [
-    {path:'', redirectTo:'trainingreports', pathMatch:'full'},
+    
     {path:'trainingreports', component: TrainingreportsComponent},
     {path:'modifycurriculum', component: ModifycurriculumComponent},
-    {path:'adminsecurity', component: AdminsecurityComponent}
+    {path:'adminsecurity', component: AdminsecurityComponent},
+    {path:'', redirectTo:'trainingreports', pathMatch:'full'},
     ]
   }
 ]
@@ -41,6 +45,9 @@ const ROUTES: Routes=[
     ModifycurriculumComponent,
     AdminsecurityComponent,
     GlobalinfoComponent,
+    TrainingcurriculumComponent,
+    ProjectfilesComponent,
+    UnitinformationComponent,
     
     
   ],
