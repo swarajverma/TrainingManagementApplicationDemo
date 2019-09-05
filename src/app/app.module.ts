@@ -4,7 +4,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { OAuthModule } from 'angular-oauth2-oidc';
 
-import { AppRoutingModule } from './app-routing.module';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -23,11 +22,11 @@ export function onAuthRequired({ oktaAuth, router }) {
 const ROUTES: Routes=[
   {path:'globalinformation', component: GlobalinfoComponent,
   children: [
-    {path:'', redirectTo:'trainingreports', pathMatch:'full'},
     {path:'trainingreports', component: TrainingreportsComponent},
     {path:'modifycurriculum', component: ModifycurriculumComponent},
-    {path:'adminsecurity', component: AdminsecurityComponent}
-    ]
+    {path:'adminsecurity', component: AdminsecurityComponent},
+    {path:'', redirectTo:'trainingreports', pathMatch:'full'},
+  ]
   }
 ]
 
@@ -46,7 +45,6 @@ const ROUTES: Routes=[
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     OAuthModule.forRoot(),
     HttpClientModule,
     RouterModule.forRoot(ROUTES)
