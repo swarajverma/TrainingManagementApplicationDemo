@@ -11,5 +11,9 @@ export class TrainingcurriculumComponent implements OnInit {
 
   ngOnInit() {
   }
+  getName()
+  {
+    return "Unit Training Curriculum";
+  }
 
 }

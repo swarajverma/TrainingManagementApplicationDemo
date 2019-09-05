@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-unitinformation',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UnitinformationComponent implements OnInit {
 
-  constructor() { }
+  constructor(public route : ActivatedRoute) {
+    var snapshot = route.snapshot;
+    console.log(snapshot.routeConfig.component.name); //This will give you the name of current active component
+  
+  }
 
   ngOnInit() {
+    
+
   }
 
 }

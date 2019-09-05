@@ -4,7 +4,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { OAuthModule } from 'angular-oauth2-oidc';
 
-import { AppRoutingModule } from './app-routing.module';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -16,6 +15,8 @@ import { GlobalinfoComponent } from './global/globalinfo/globalinfo.component';
 import { TrainingcurriculumComponent } from './unit/trainingcurriculum/trainingcurriculum.component';
 import { ProjectfilesComponent } from './unit/projectfiles/projectfiles.component';
 import { UnitinformationComponent } from './unit/unitinformation/unitinformation.component';
+import { UnittrainingreportComponent } from './unit/unittrainingreport/unittrainingreport.component';
+
 
 
 
@@ -26,13 +27,20 @@ export function onAuthRequired({ oktaAuth, router }) {
 const ROUTES: Routes=[
   {path:'globalinformation', component: GlobalinfoComponent,
   children: [
-    
     {path:'trainingreports', component: TrainingreportsComponent},
     {path:'modifycurriculum', component: ModifycurriculumComponent},
     {path:'adminsecurity', component: AdminsecurityComponent},
     {path:'', redirectTo:'trainingreports', pathMatch:'full'},
-    ]
-  }
+  ]
+  },
+  {path: 'unitinformation', component: UnitinformationComponent,
+  children: [
+    {path:'trainingreports', component: UnittrainingreportComponent},
+    {path:'trainingcurriculum', component: TrainingcurriculumComponent},
+    {path:'projectfiles', component: ProjectfilesComponent},
+    {path:'', redirectTo:'trainingcurriculum', pathMatch:'full'},
+  ]
+}
 ]
 
 
@@ -48,12 +56,12 @@ const ROUTES: Routes=[
     TrainingcurriculumComponent,
     ProjectfilesComponent,
     UnitinformationComponent,
+    UnittrainingreportComponent,
     
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     OAuthModule.forRoot(),
     HttpClientModule,
     RouterModule.forRoot(ROUTES)
