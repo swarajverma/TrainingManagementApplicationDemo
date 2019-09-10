@@ -1,6 +1,6 @@
 <footer class="footer uxf-footer" role="contentinfo" style="margin-bottom: 0em" id="footer">
   <div class="container-fluid">
-    <!-- <div class="row flex-xl-nowrap"> -->
+    <div class="row flex-xl-nowrap">
       <div class="col-24">
         <ul class="nav">
           <li>
@@ -26,15 +26,8 @@
           </li>
         </ul>
         <span class="uxf-footer-legal">Copyright ©
-          <span id="uxf-current-year"></span> Deere &amp; Company. All Rights Reserved.</span>
+          <span id="uxf-current-year">{{date}}</span> Deere &amp; Company. All Rights Reserved.</span>
       </div>
-    <!-- </div> -->
+    </div>
   </div>
 </footer>
-<script>
-  document.addEventListener("DOMContentLoaded", function (event) {
-    $(function () {
-      document.getElementById("uxf-current-year").innerHTML = new Date().getFullYear();
-    });
-  });
-</script>

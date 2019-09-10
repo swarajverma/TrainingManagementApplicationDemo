@@ -16,6 +16,11 @@ import { TrainingcurriculumComponent } from './unit/trainingcurriculum/trainingc
 import { ProjectfilesComponent } from './unit/projectfiles/projectfiles.component';
 import { UnitinformationComponent } from './unit/unitinformation/unitinformation.component';
 import { UnittrainingreportComponent } from './unit/unittrainingreport/unittrainingreport.component';
+import { BreadcrumbComponent } from './core/breadcrumb/breadcrumb.component';
+import { HelpinfoComponent } from './help/helpinfo/helpinfo.component';
+import { TrainingComponent } from './help/training/training.component';
+import { FaqComponent } from './help/faq/faq.component';
+import { ContactComponent } from './help/contact/contact.component';
 
 
 
@@ -24,23 +29,62 @@ export function onAuthRequired({ oktaAuth, router }) {
   router.navigate(['/login']);
 }
 
-const ROUTES: Routes=[
-  {path:'globalinformation', component: GlobalinfoComponent,
-  children: [
-    {path:'trainingreports', component: TrainingreportsComponent},
-    {path:'modifycurriculum', component: ModifycurriculumComponent},
-    {path:'adminsecurity', component: AdminsecurityComponent},
-    {path:'', redirectTo:'trainingreports', pathMatch:'full'},
-  ]
+const ROUTES: Routes = [
+  {
+    path: 'globalinformation', component: GlobalinfoComponent,
+    data: {
+      breadcrumb: 'Global Information',
+    },
+    children: [
+      {
+        path: 'trainingreports', component: TrainingreportsComponent,
+        data: {
+          breadcrumb: 'Global Training Reports',
+        },
+      },
+      {
+        path: 'modifycurriculum', component: ModifycurriculumComponent,
+        data: {
+          breadcrumb: 'Modify Global Training Curriculum',
+        },
+      },
+      {
+        path: 'adminsecurity', component: AdminsecurityComponent,
+        data: {
+          breadcrumb: 'Admin and Security',
+        },
+      },
+      { path: '', redirectTo: 'trainingreports', pathMatch: 'full' },
+    ]
   },
-  {path: 'unitinformation', component: UnitinformationComponent,
-  children: [
-    {path:'trainingreports', component: UnittrainingreportComponent},
-    {path:'trainingcurriculum', component: TrainingcurriculumComponent},
-    {path:'projectfiles', component: ProjectfilesComponent},
-    {path:'', redirectTo:'trainingcurriculum', pathMatch:'full'},
-  ]
-}
+
+  {
+    path: 'unitinformation', component: UnitinformationComponent,
+    data: {
+      breadcrumb: 'Unit Information',
+    },
+    children: [
+      {
+        path: 'trainingreports', component: UnittrainingreportComponent,
+        data: {
+          breadcrumb: 'Unit Training Reports',
+        },
+      },
+      {
+        path: 'trainingcurriculum', component: TrainingcurriculumComponent,
+        data: {
+          breadcrumb: 'Unit Training Curriculum',
+        },
+      },
+      {
+        path: 'projectfiles', component: ProjectfilesComponent,
+        data: {
+          breadcrumb: 'Project Files',
+        },
+      },
+      { path: '', redirectTo: 'trainingcurriculum', pathMatch: 'full' },
+    ]
+  }
 ]
 
 
@@ -57,8 +101,13 @@ const ROUTES: Routes=[
     ProjectfilesComponent,
     UnitinformationComponent,
     UnittrainingreportComponent,
-    
-    
+    BreadcrumbComponent,
+    HelpinfoComponent,
+    TrainingComponent,
+    FaqComponent,
+    ContactComponent,
+
+
   ],
   imports: [
     BrowserModule,

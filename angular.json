@@ -26,6 +26,7 @@
               "src/styles.css"
             ],
             "scripts": [
+              "src/assets/js/uxframe-2019.2.2.min.js",
               "src/assets/js/uxframe-plus-2019.2.2.min.js"
               ],
             "es5BrowserSupport": true
